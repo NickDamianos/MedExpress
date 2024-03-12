@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="427.0" prefWidth="856.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="meditest.forms.New_costomer_add_FXMLController">
+   <children>
+      <Label layoutX="120.0" layoutY="34.0" prefHeight="60.0" prefWidth="132.0" text="Φαρμακοποιός">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="528.0" layoutY="34.0" prefHeight="60.0" prefWidth="120.0" text="Φαρμακείο">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="120.0" layoutY="119.0" text="Όνομα :" />
+      <Label layoutX="118.0" layoutY="155.0" text="Επίθετο :" />
+      <Label layoutX="100.0" layoutY="187.0" text="Φαρμακείο :" />
+      <Label layoutX="102.0" layoutY="222.0" text="Τηλέφωνο :" />
+      <Label layoutX="125.0" layoutY="258.0" text="Email :" />
+      <Label layoutX="528.0" layoutY="107.0" text="Όνομα :" />
+      <Label layoutX="510.0" layoutY="147.0" text="Τηλέφωνο :" />
+      <Label layoutX="678.0" layoutY="179.0" text="Τ.Κ. :" />
+      <Label layoutX="528.0" layoutY="179.0" text="Οδός :" />
+      <Label layoutX="514.0" layoutY="223.0" text="Περιοχή : " />
+      <Label layoutX="671.0" layoutY="223.0" text="Πόλη : " />
+      <Label layoutX="519.0" layoutY="271.0" text="Δήμος : " />
+      <Label layoutX="668.0" layoutY="271.0" text="Α.Φ.Μ. : " />
+      <TextField fx:id="farmak_name" layoutX="178.0" layoutY="115.0" />
+      <TextField fx:id="farmak_surname" layoutX="178.0" layoutY="151.0" />
+      <TextField fx:id="farmak_phone" layoutX="178.0" layoutY="218.0" />
+      <TextField fx:id="farmak_email" layoutX="178.0" layoutY="254.0" />
+      <TextField fx:id="farmakeio_name" layoutX="574.0" layoutY="103.0" />
+      <TextField fx:id="farmakeio_phone" layoutX="574.0" layoutY="143.0" />
+      <TextField fx:id="farmakeio_odos" layoutX="574.0" layoutY="175.0" prefHeight="25.0" prefWidth="85.0" />
+      <TextField fx:id="farmakeio_tk" layoutX="715.0" layoutY="175.0" prefHeight="25.0" prefWidth="85.0" />
+      <TextField fx:id="farmakeio_perioxi" layoutX="574.0" layoutY="218.0" prefHeight="25.0" prefWidth="85.0" />
+      <TextField fx:id="farmakeio_poli" layoutX="715.0" layoutY="218.0" prefHeight="25.0" prefWidth="85.0" />
+      <TextField fx:id="farmakeio_dimos" layoutX="574.0" layoutY="267.0" prefHeight="25.0" prefWidth="85.0" />
+      <TextField fx:id="farmakeio_afm" layoutX="715.0" layoutY="267.0" prefHeight="25.0" prefWidth="85.0" />
+      <ChoiceBox fx:id="farmak_farmakeio" layoutX="178.0" layoutY="184.0" prefWidth="150.0" />
+      <Button fx:id="Add_farmak_button" layoutX="116.0" layoutY="322.0" mnemonicParsing="false" onAction="#Add_farmak" prefHeight="60.0" prefWidth="140.0" text="Προσθήκη" />
+      <Button fx:id="farmakeio_Add_button" layoutX="608.0" layoutY="322.0" mnemonicParsing="false" onAction="#farmakeio_Add" prefHeight="60.0" prefWidth="140.0" text="Προσθήκη" />
+   </children>
+</AnchorPane>

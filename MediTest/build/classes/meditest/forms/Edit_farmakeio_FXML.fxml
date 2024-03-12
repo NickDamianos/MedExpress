@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="654.0" prefWidth="410.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/9.0.1" fx:controller="meditest.forms.Edit_farmakeio_FXMLController">
+   <children>
+      <Label layoutX="74.0" layoutY="92.0" text="Όνομα :" />
+      <TextField fx:id="name" layoutX="187.0" layoutY="88.0" />
+      <Label layoutX="74.0" layoutY="134.0" text="Τηλέφωνο :" />
+      <TextField fx:id="phone" layoutX="187.0" layoutY="130.0" />
+      <Label layoutX="74.0" layoutY="175.0" text="Οδός :" />
+      <TextField fx:id="odos" layoutX="187.0" layoutY="171.0" />
+      <Label layoutX="74.0" layoutY="220.0" text="Τ.Κ. :" />
+      <TextField fx:id="tk" layoutX="187.0" layoutY="216.0" />
+      <Label layoutX="74.0" layoutY="257.0" text="Περιοχή : " />
+      <TextField fx:id="periox" layoutX="187.0" layoutY="253.0" />
+      <Label layoutX="75.0" layoutY="392.0" text="Α.Φ.Μ. : " />
+      <TextField fx:id="afm" layoutX="188.0" layoutY="388.0" />
+      <Label layoutX="74.0" layoutY="299.0" text="Πόλη : " />
+      <TextField fx:id="city" layoutX="187.0" layoutY="295.0" />
+      <Label layoutX="75.0" layoutY="346.0" text="Δήμος : " />
+      <TextField fx:id="dimos" layoutX="188.0" layoutY="342.0" />
+      <Button layoutX="47.0" layoutY="520.0" mnemonicParsing="false" onAction="#delete" prefHeight="72.0" prefWidth="111.0" style="-fx-background-color: RED;" text="DELETE" />
+      <Button layoutX="252.0" layoutY="520.0" mnemonicParsing="false" onAction="#edit" prefHeight="72.0" prefWidth="111.0" text="Edit" />
+      <Label fx:id="label_id" layoutX="154.0" layoutY="14.0" prefHeight="49.0" prefWidth="102.0">
+         <font>
+            <Font size="39.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="734.0" prefWidth="1006.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="meditest.forms.Statistics_FXMLController">
+   <children>
+      <TabPane fx:id="Tabs_Stats" layoutX="65.0" layoutY="32.0" prefHeight="734.0" prefWidth="1006.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+            <Tab fx:id="Tab_1" text="Τζίρος/προϊόν">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="Table_TZ_PR" layoutY="50.0" prefHeight="655.0" prefWidth="1006.0">
+                          <columns>
+                            <TableColumn fx:id="Table_TZ_PR_ID_col" prefWidth="75.0" text="ID" />
+                            <TableColumn fx:id="Table_TZ_PR_onoms_col" prefWidth="108.0" text="Όνομα " />
+                              <TableColumn fx:id="Table_TZ_PR_minas_col" prefWidth="121.0" text="Μήνας" />
+                              <TableColumn fx:id="Table_TZ_PR_tz_ana_mina_col" prefWidth="110.0" text="Τζίρος/Μήνα" />
+                              <TableColumn fx:id="Table_TZ_PR_temaxia_ana_mina_col" prefWidth="191.0" text="Τεμάχεια/Μήνα" />
+                              <TableColumn fx:id="Table_TZ_PR_year_col" prefWidth="111.0" text="Χρόνος" />
+                              <TableColumn fx:id="Table_TZ_PR_tziros_ana_xrono_col" prefWidth="104.0" text="Τζίρος/Χρόνο" />
+                              <TableColumn fx:id="Table_TZ_PR_temaxia_ana_xrono_col" prefWidth="185.0" text="Τεμάχεια/Χρόνο" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+          <Tab fx:id="Tab_2" text="Τζίρος/Φαρμακοποιο">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="Table_TZ_FARM" layoutY="50.0" prefHeight="655.0" prefWidth="1006.0">
+                           <columns>
+                              <TableColumn fx:id="Table_TZ_FARM_ID_col" prefWidth="75.0" text="ID" />
+                              <TableColumn fx:id="Table_TZ_FARM_Onoma_farm_col" prefWidth="143.0" text="Όνομα Φαρμακοποιού" />
+                              <TableColumn fx:id="Table_TZ_FARM_Minas_col" minWidth="3.0" prefWidth="100.0" text="Μήνας" />
+                              <TableColumn fx:id="Table_TZ_FARM_TZiros_ana_mina_col" prefWidth="171.0" text="Τζίρος/Μήνα" />
+                              <TableColumn fx:id="Table_TZ_FARM_Temaxeia_ana_mina_col" prefWidth="141.0" text="Τεμάχεια/Μήνα" />
+                              <TableColumn fx:id="Table_TZ_FARM_Xronos_col" prefWidth="116.0" text="Χρόνος" />
+                              <TableColumn fx:id="Table_TZ_FARM_TZIROS_ana_XRONO_col" prefWidth="136.0" text="Τζίρος/Χρόνο" />
+                              <TableColumn fx:id="Table_TZ_FARM_Temaxeia_ana_xrono_col" prefWidth="123.0" text="Τεμάχεια/Χρόνο" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="Tab_3" text="Ετήσιος Τζίρος/φαρμακειο">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="Table_ETISIOS_ana_FARMAKEIO" layoutX="14.0" layoutY="52.0" prefHeight="653.0" prefWidth="992.0">
+                          <columns>
+                            <TableColumn fx:id="Table_ETISIOS_ana_FARMAKEIO_ID_col" prefWidth="75.0" text="ID" />
+                            <TableColumn fx:id="Table_ETISIOS_ana_FARMAKEIO_Onoma_col" prefWidth="75.0" text="Όνομα" />
+                              <TableColumn fx:id="Table_ETISIOS_ana_FARMAKEIO_Xronos_col" prefWidth="75.0" text="Χρονος" />
+                              <TableColumn fx:id="Table_ETISIOS_ana_FARMAKEIO_TZIROS_ANA_Xrono_col" prefWidth="157.0" text="Τζίρος/Χρόνο Πληρωμένα" />
+                              <TableColumn fx:id="Table_ETISIOS_ana_FARMAKEIO_PLiromena_col" prefWidth="140.0" text="Πληρωμένα Τιμολόγια" />
+                              <TableColumn fx:id="Table_ETISIOS_ana_FARMAKEIO_MI_Pliromena_col" prefWidth="156.0" text="Μη Πληρωμένα Τιμολόγια" />
+                              <TableColumn fx:id="Table_ETISIOS_ana_FARMAKEIO_ALL_Timologia_col" prefWidth="124.0" text="Όλα τα τιμολόγια" />
+                              <TableColumn fx:id="Table_ETISIOS_ana_FARMAKEIO_RITHMOS_Pliromis_Timologion_col" prefWidth="189.0" text="Ρυθμος πληρωμής Τιμολογίων" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="Tab_4" text="Πωλήσης/Φαρμακείο/προϊόν">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="Table_POL_FARM_Proion" layoutY="50.0" prefHeight="655.0" prefWidth="1006.0">
+                           <columns>
+                              <TableColumn fx:id="Table_POL_FARM_Proion_ID_col" prefWidth="148.0" text="ID Φαρμακείου" />
+                              <TableColumn fx:id="Table_POL_FARM_Proion_Onoma_FARMAKEIOU_col" prefWidth="169.0" text="Όνομα" />
+                              <TableColumn fx:id="Table_POL_FARM_Proion_ID_proiontos_col" prefWidth="105.0" text="ID_Προιόν" />
+                              <TableColumn fx:id="Table_POL_FARM_Proion_onoma_proion_col" prefWidth="136.0" text="Όνομα" />
+                              <TableColumn fx:id="Table_POL_FARM_Proion_year_col" prefWidth="113.0" text="Χρόνος" />
+                              <TableColumn fx:id="Table_POL_FARM_Proion_temaxia_xrono_col" prefWidth="160.0" text="Τεμάχεια/Χρόνο" />
+                              <TableColumn fx:id="Table_POL_FARM_Proion_tziros_xronos_col" prefWidth="174.0" text="Τζίρος/Χρόνο" />
+                           </columns>
+                        </TableView>
+                        <TextField fx:id="etisios_txt" editable="false" layoutX="821.0" layoutY="15.0" prefHeight="25.0" prefWidth="171.0" />
+                        <Label layoutX="724.0" layoutY="17.0" prefHeight="21.0" prefWidth="88.0" text="Ετήσιος Τζίρος:" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="Tab_5" text="Ποσοστα/προϊόν">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="TABLE_Pososta_proion" layoutY="37.0" prefHeight="668.0" prefWidth="1006.0">
+                           <columns>
+                              <TableColumn fx:id="TABLE_Pososta_proion_Farmako_ID_col" prefWidth="99.0" text="ID Φαρμάκου" />
+                              <TableColumn fx:id="TABLE_Pososta_proion_ONOMA_col" prefWidth="105.0" text="Όνομα" />
+                              <TableColumn fx:id="TABLE_Pososta_proion_XRONOS_Col" prefWidth="106.0" text="Χρόνος" />
+                              <TableColumn fx:id="TABLE_Pososta_proion_SYN_Poso_col" prefWidth="213.0" text="Συνολικό ποσο" />
+                              <TableColumn fx:id="TABLE_Pososta_proion_TIMI_AGORAS_COL" prefWidth="203.0" text="Ποσό αγοράς απο Προμιθευτή" />
+                              <TableColumn fx:id="TABLE_Pososta_proion_Kerdi_col" prefWidth="115.0" text="Κέρδη/Χρόνο" />
+                              <TableColumn fx:id="TABLE_Pososta_proion_POSOSTO_COL" prefWidth="164.0" text="Κέρδος(Ποσοστό %)" />
+                           </columns>
+                        </TableView>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="Tab_6" text="Ρυθμός/κατ/εταιρια">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView layoutY="14.0" prefHeight="631.0" prefWidth="431.0">
+                          <columns>
+                            <TableColumn prefWidth="199.0" text="Κατηγορία" />
+                            <TableColumn prefWidth="214.0" text="Ρυθμος Πώλησης" />
+                          </columns>
+                        </TableView>
+                        <TableView layoutX="438.0" layoutY="14.0" prefHeight="631.0" prefWidth="556.0">
+                          <columns>
+                            <TableColumn prefWidth="279.0" text="Εταιρια" />
+                            <TableColumn prefWidth="276.0" text="Ρυθμος Πώλησης" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="Tab_7" text="Κερδοφόρα Προϊόντα">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="Kerd_Table" layoutX="14.0" layoutY="14.0" prefHeight="626.0" prefWidth="976.0">
+                          <columns>
+                            <TableColumn fx:id="Kerd_Table_ID_col" prefWidth="75.0" text="ID" />
+                            <TableColumn fx:id="Kerd_Table_Onoma" prefWidth="75.0" text="Όνομα" />
+                              <TableColumn fx:id="Kerd_Table_minas_col" prefWidth="75.0" text="Μήνας" />
+                              <TableColumn fx:id="Kerd_Table_temaxia_col" prefWidth="130.0" text="Μήνας/Τεμαχεια" />
+                              <TableColumn fx:id="Kerd_Table_Tziros_col" prefWidth="106.0" text="Τζίρος/Μήνας" />
+                              <TableColumn fx:id="Kerd_Table_Prev_month_col" prefWidth="138.0" text="Προηγούμενος Μήνας" />
+                              <TableColumn fx:id="Kerd_Table_Prev_month_Temaxia_col" prefWidth="140.0" text="Πρ. Μήνας/Τεμάχεια" />
+                              <TableColumn fx:id="Kerd_Table_Prev_month_Tziros_col" prefWidth="137.0" text="Πρ. Μήνας/Τζίρος" />
+                              <TableColumn fx:id="Kerd_Table_KERDOFORW_col" prefWidth="114.0" text="Κερδοφόρο" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="Kerd_Table_Button" disable="true" layoutX="852.0" layoutY="640.0" mnemonicParsing="false" onAction="#Kerd_Table_Button_click" prefHeight="52.0" prefWidth="125.0" text="Update" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="Tab_8" text="Λογιστής">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="Gia_Pliromi_TABLE" layoutY="18.0" prefHeight="626.0" prefWidth="1006.0">
+                          <columns>
+                            <TableColumn fx:id="Gia_Pliromi_TABLE_ID_Parag_Col" prefWidth="75.0" text="ID" />
+                            <TableColumn fx:id="Gia_Pliromi_TABLE_Onoma_Farmakopoiou_col" prefWidth="119.0" text="Όνομα" />
+                              <TableColumn fx:id="Gia_Pliromi_TABLE_EPitheto_Farmakopoiou_Col" prefWidth="167.0" text="Επίθετο" />
+                              <TableColumn fx:id="Gia_Pliromi_TABLE_Timi_col" prefWidth="189.0" text="Τιμή" />
+                              <TableColumn fx:id="Gia_Pliromi_TABLE_hmer_col" prefWidth="131.0" text="Ημερομηνία" />
+                              <TableColumn fx:id="Gia_Pliromi_TABLE_Timologio_col" prefWidth="193.0" text="Τιμολόγιο" />
+                              <TableColumn fx:id="Gia_Pliromi_TABLE_Plirothike_col" prefWidth="131.0" text="Πληρώθηκε" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="UPDATE_PLIROMI_button" disable="true" layoutX="839.0" layoutY="652.0" mnemonicParsing="false" onAction="#UPDATE_PLIROMI" prefHeight="43.0" prefWidth="143.0" text="UPDATE" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

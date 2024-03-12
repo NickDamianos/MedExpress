@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="744.0" prefWidth="990.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="meditest.forms.Customer_FXMLController">
+   <children>
+      <TextField fx:id="search_text" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="615.0" promptText="Αναζήτηση | για αναζήτηση μέσο κωδικού (ID) βάλτε # (πχ #1)" />
+      <CheckBox fx:id="check_farmakopoios" layoutX="642.0" layoutY="18.0" mnemonicParsing="false" selected="true" text="Φαρμακοποιός" />
+      <CheckBox fx:id="check_farmakeio" layoutX="753.0" layoutY="18.0" mnemonicParsing="false" text="Φαρμακείο" />
+      <Button fx:id="new_pelatis_button" layoutX="847.0" layoutY="14.0" mnemonicParsing="false" onAction="#new_costomer" prefHeight="25.0" prefWidth="61.0" text="Νέος" />
+      <Button fx:id="refresh_button" layoutX="916.0" layoutY="14.0" mnemonicParsing="false" onAction="#refresh_button" prefHeight="25.0" prefWidth="74.0" text="Ανανέωση" />
+      <TableView fx:id="farmakeia_table" layoutX="462.0" layoutY="138.0" prefHeight="552.0" prefWidth="518.0">
+        <columns>
+          <TableColumn fx:id="farmakeia_ID_col" prefWidth="37.0" text="ID" />
+          <TableColumn fx:id="farmakeia_name_col" prefWidth="61.0" text="Όνομα" />
+            <TableColumn fx:id="farmakeia_phone_col" prefWidth="69.0" text="Τηλέφωνο" />
+            <TableColumn fx:id="farmakeia_odos_col" prefWidth="57.0" text="Οδός" />
+            <TableColumn fx:id="farmakeia_TK_col" prefWidth="37.0" text="Τ.Κ." />
+            <TableColumn fx:id="farmakeia_PERpolDim_col" prefWidth="134.0" text="Περιοχή/Πόλη/Δήμος" />
+            <TableColumn fx:id="farmakeia_AFM_col" prefWidth="52.0" text="Α.Φ.Μ." />
+            <TableColumn fx:id="farmakeia_edit_col" prefWidth="69.0" text="edit" />
+        </columns>
+      </TableView>
+      <TableView fx:id="farmakopoioi_table" layoutY="138.0" prefHeight="552.0" prefWidth="456.0">
+        <columns>
+          <TableColumn fx:id="farmakopoioi_ID_col" prefWidth="36.0" text="ID" />
+          <TableColumn fx:id="farmakopoioi_name_col" prefWidth="59.0" text="Όνομα" />
+            <TableColumn fx:id="farmakopoioi_epith_col" prefWidth="66.0" text="Επίθετο" />
+            <TableColumn fx:id="farmakopoioi_id_farmakeiou_col" prefWidth="71.0" text="Φαρμακείο" />
+            <TableColumn fx:id="farmakopoioi_phone_col" prefWidth="78.0" text="Τηλέφωνο" />
+            <TableColumn fx:id="farmakopoioi_email_col" prefWidth="81.0" text="email" />
+            <TableColumn fx:id="farmakopoioi_edit_col" prefWidth="64.0" text="edit" />
+        </columns>
+      </TableView>
+      <Label layoutX="185.0" layoutY="87.0" prefHeight="37.0" prefWidth="124.0" text="Φαρμακοποιοί">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="702.0" layoutY="87.0" prefHeight="37.0" prefWidth="103.0" text="Φαρμακεία">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

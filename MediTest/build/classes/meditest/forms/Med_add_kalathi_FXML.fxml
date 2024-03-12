@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="688.0" prefWidth="422.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="meditest.forms.Med_add_kalathi_FXMLController">
+   <children>
+      <VBox fx:id="pane" alignment="CENTER" prefHeight="688.0" prefWidth="482.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fx:id="med_img" fitHeight="285.0" fitWidth="482.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="name_label">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <Label fx:id="ousia_label">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <Label fx:id="temaxia_label">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="154.0" prefWidth="506.0">
+               <children>
+                  <Button fx:id="minus_button" mnemonicParsing="false" onAction="#minus_tem" prefHeight="25.0" prefWidth="39.0" style="-fx-border-width: 0; -fx-background-radius: 0;" text="-">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <TextField fx:id="num_txt" prefHeight="25.0" prefWidth="39.0" text="1">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button fx:id="plus_button" mnemonicParsing="false" onAction="#plus_tem" prefHeight="25.0" prefWidth="39.0" style="-fx-border-width: 0; -fx-background-radius: 0;" text="+">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets right="20.0" />
+               </VBox.margin>
+            </HBox>
+            <Button fx:id="to_card" mnemonicParsing="false" onAction="#add_to_cart" prefHeight="55.0" prefWidth="118.0" text="Προσθήκη" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

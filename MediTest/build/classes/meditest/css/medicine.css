@@ -1,0 +1,103 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 5, 2020, 12:42:30 AM
+    Author     : nikolaos damianos
+*/
+
+
+
+
+.button2{
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-background-radius: 0;
+    -fx-background-color: transparent;
+    -fx-font-family:"Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 1em; /* 12 */
+    -fx-text-fill: black;
+    
+}
+
+.button2:focused {
+    -fx-border-color: transparent, black;
+    -fx-border-width: 1, 1;
+    -fx-border-style:  segments(1, 2);
+    -fx-border-radius: 0, 0;
+    -fx-border-insets: 1 1 1 1, 0;
+}
+
+.button2:pressed {
+    -fx-background-color:coral ;
+    -fx-text-fill: #9925e2;
+}
+
+.button2:hover {
+    -fx-background-color: #009aaf
+}
+
+
+
+
+
+
+
+.button1{
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-background-radius: 0;
+    -fx-background-color: #b5ecce;
+    -fx-font-family:"Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 1em; /* 12 */
+    -fx-text-fill: black;
+    
+}
+
+.button1:focused {
+    -fx-border-color: transparent, black;
+    -fx-border-width: 1, 1;
+    -fx-border-style:  segments(1, 2);
+    -fx-border-radius: 0, 0;
+    -fx-border-insets: 1 1 1 1, 0;
+}
+
+.button1:pressed {
+    -fx-background-color:coral ;
+    -fx-text-fill: #9925e2;
+}
+
+.button1:hover {
+    -fx-background-color: #009aaf
+}
+
+
+.button3{
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-background-radius: 0;
+    -fx-background-color: #d5ecce;
+    -fx-font-family:"Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 1em; /* 12 */
+    -fx-text-fill: black;
+    
+}
+
+.button3:focused {
+    -fx-border-color: transparent, black;
+    -fx-border-width: 1, 1;
+    -fx-border-style:  segments(1, 2);
+    -fx-border-radius: 0, 0;
+    -fx-border-insets: 1 1 1 1, 0;
+}
+
+.button3:pressed {
+    -fx-background-color:coral ;
+    -fx-text-fill: #9925e2;
+}
+
+.button3:hover {
+    -fx-background-color: #009aaf
+}

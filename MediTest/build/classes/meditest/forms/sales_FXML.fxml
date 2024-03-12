@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="734.0" prefWidth="1006.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="meditest.forms.Sales_FXMLController">
+   <children>
+      <TabPane layoutY="6.0" prefHeight="744.0" prefWidth="1006.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab fx:id="Prepare" text="Ετοιμασία">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ChoiceBox fx:id="parg_for_apothiki_choice_box" layoutX="177.0" layoutY="14.0" prefHeight="25.0" prefWidth="652.0" />
+                        <TableView fx:id="apothiki_ready_table" layoutX="107.0" layoutY="118.0" prefHeight="500.0" prefWidth="793.0">
+                          <columns>
+                            <TableColumn fx:id="etimo_id_col" minWidth="0.0" text="ID" />
+                            <TableColumn fx:id="etoimo_onoma_col" minWidth="0.0" prefWidth="277.0" text="Όνομα" />
+                              <TableColumn fx:id="etoimo_ousia_col" minWidth="0.0" prefWidth="282.0" text="Ουσία" />
+                              <TableColumn fx:id="etoimo_temaxia_col" prefWidth="153.0" text="Τεμάχια" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="ready_Button" disable="true" layoutX="791.0" layoutY="630.0" mnemonicParsing="false" onAction="#for_send_prep_button_click" prefHeight="60.0" prefWidth="109.0" text="Ετοιμο" />
+                        <Label fx:id="parag_for_ready_label" layoutX="14.0" layoutY="14.0" prefHeight="102.0" prefWidth="157.0" wrapText="true">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="for_etimo_timologio" disable="true" layoutX="107.0" layoutY="630.0" mnemonicParsing="false" onAction="#open_timologio" prefHeight="60.0" prefWidth="104.0" text="Τιμολόγιο" />
+                        <Button fx:id="etoimasia_button" layoutX="846.0" layoutY="14.0" mnemonicParsing="false" onAction="#refresh_etima_button_click" prefHeight="25.0" prefWidth="75.0" text="Ανανέωση" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="for_send" text="Για αποστολή">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ChoiceBox fx:id="etimes_parag_gia_send" layoutX="306.0" layoutY="14.0" prefHeight="25.0" prefWidth="416.0" />
+                        <TableView fx:id="for_send_table" layoutX="74.0" layoutY="51.0" prefHeight="542.0" prefWidth="854.0">
+                          <columns>
+                            <TableColumn fx:id="for_send_ID_col" prefWidth="115.0" text="ID" />
+                            <TableColumn fx:id="for_send_ONOMA_col" prefWidth="291.0" text="Όνομα" />
+                              <TableColumn fx:id="for_send_ousia_col" prefWidth="254.0" text="Ουσία" />
+                              <TableColumn fx:id="for_send_temaxia_col" prefWidth="193.0" text="Τεμάχια" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="send_button" disable="true" layoutX="832.0" layoutY="607.0" mnemonicParsing="false" onAction="#sended" prefHeight="63.0" prefWidth="96.0" text="στάλθηκε" />
+                        <Button fx:id="cancel_button" disable="true" layoutX="722.0" layoutY="607.0" mnemonicParsing="false" onAction="#cancel_order" prefHeight="63.0" prefWidth="96.0" text="ακύρωση" />
+                        <Button fx:id="for_send_timologio" disable="true" layoutX="74.0" layoutY="608.0" mnemonicParsing="false" onAction="#open_timologio_send" prefHeight="60.0" prefWidth="104.0" text="Τιμολόγιο" />
+                        <Button fx:id="for_send_refresh_buuton" layoutX="744.0" layoutY="14.0" mnemonicParsing="false" onAction="#for_send_refresh_button_click" prefHeight="25.0" prefWidth="80.0" text="Ανανέωση" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="history" text="Ιστορικό">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="history_Search" layoutX="122.0" layoutY="14.0" prefHeight="25.0" prefWidth="763.0" promptText="Αναζήτηση | για αναζήτηση μέσο κωδικού (ID) βάλτε # (πχ #1)" />
+                        <TableView fx:id="history_table" layoutX="-1.0" layoutY="52.0" prefHeight="666.0" prefWidth="1006.0">
+                          <columns>
+                            <TableColumn fx:id="history_table_col" prefWidth="75.0" text="ID" />
+                            <TableColumn fx:id="farmakopoios_name_table_col" prefWidth="111.0" text="Ονοματεπώνυμο" />
+                              <TableColumn fx:id="farmakeio_history_table_col" prefWidth="108.0" text="Φαρμακείο" />
+                              <TableColumn fx:id="wra_history_table_col" prefWidth="135.0" text="Ημερομηνία και ώρα" />
+                              <TableColumn fx:id="address_history_table_col" prefWidth="127.0" text="Διεύθυνση" />
+                              <TableColumn fx:id="dianomeas_history_table_col" prefWidth="132.0" text="Διανομέας" />
+                              <TableColumn fx:id="meres_history_table_col" prefWidth="115.0" text="Μέρες παράδοσης" />
+                              <TableColumn fx:id="kostos_history_table_col" prefWidth="82.0" text="Κόστος" />
+                              <TableColumn fx:id="timologio_history_table_col" prefWidth="120.0" text="Τιμολόγιο" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="history_refresh_button" layoutX="893.0" layoutY="14.0" mnemonicParsing="false" onAction="#history_refresh_button_click" prefHeight="25.0" prefWidth="81.0" text="Ανανέωση" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

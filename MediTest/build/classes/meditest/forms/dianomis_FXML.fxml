@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="528.0" prefWidth="920.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="meditest.forms.Dianomis_FXMLController">
+   <children>
+      <BorderPane prefHeight="528.0" prefWidth="920.0">
+         <top>
+            <VBox prefHeight="216.0" prefWidth="922.0" BorderPane.alignment="CENTER">
+               <children>
+                  <GridPane prefHeight="136.0" prefWidth="924.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="635.0" minWidth="10.0" prefWidth="188.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="616.0" minWidth="10.0" prefWidth="190.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="564.0" minWidth="10.0" prefWidth="168.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="431.0" minWidth="10.0" prefWidth="272.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="ID Διανομέα:">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label prefHeight="17.0" prefWidth="151.0" text="Αριθμός Παραγγελιών:" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label text="Κριτική Διανομέα:" GridPane.columnIndex="1">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label text="Ημερομηνία Πρόσληψης:" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label text="Πληρωμή Διανομέα: " GridPane.columnIndex="2">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Button fx:id="insertBtn" disable="true" mnemonicParsing="false" onAction="#insertBtnClicked" prefHeight="25.0" prefWidth="81.0" text="Εισαγωγή" GridPane.columnIndex="3">
+                           <GridPane.margin>
+                              <Insets left="110.0" top="5.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <Button fx:id="updateBtn" disable="true" mnemonicParsing="false" onAction="#updateBtnClicked" prefHeight="25.0" prefWidth="80.0" text="Ενημέρωση" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="110.0" top="5.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <Button fx:id="deleteBtn" disable="true" mnemonicParsing="false" onAction="#deleteBtnClicked" prefHeight="25.0" prefWidth="80.0" text="Διαγραφή" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="110.0" top="5.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <TextField fx:id="idTxt" onKeyReleased="#buttonStatus" prefHeight="25.0" prefWidth="198.0" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <TextField fx:id="numDelTxt" onKeyReleased="#buttonStatus" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <TextField fx:id="criticTxt" onKeyReleased="#buttonStatus" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <TextField fx:id="regDateTxt" onKeyReleased="#buttonStatus" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <TextField fx:id="paymentTxt" onKeyReleased="#buttonStatus" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin>
+                        </TextField>
+                     </children>
+                  </GridPane>
+                  <TextField fx:id="search_user" prefHeight="32.0" prefWidth="709.0" promptText="Πληκτρολογίστε εδώ αν θέλετε να αναζητήσεται ένα αντικείμενο">
+                     <VBox.margin>
+                        <Insets left="10.0" right="40.0" top="20.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Button fx:id="refresh" mnemonicParsing="false" onAction="#refresh_button_handler" text="Ανανέωση">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" top="20.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+               <BorderPane.margin>
+                  <Insets left="40.0" />
+               </BorderPane.margin>
+            </VBox>
+         </top>
+         <center>
+            <TableView fx:id="dbDeliveryTable" prefHeight="302.0" prefWidth="739.0" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn fx:id="dbDeliveryTableId" prefWidth="118.0" text="ID Διανομέα" />
+                <TableColumn fx:id="dbDeliveryTableNumDel" prefWidth="171.0" text="Αριθμός Παραγγελιών" />
+                  <TableColumn fx:id="dbDeliveryTableCritic" prefWidth="212.0" text="Κριτική Διανομέα" />
+                  <TableColumn fx:id="dbDeliveryTableRegDate" prefWidth="185.0" text="Ημερομηνία Πρόσληψης" />
+                  <TableColumn fx:id="dbDeliveryTablePayment" minWidth="0.0" prefWidth="153.0" text="Πληρωμή Διανομέα" />
+              </columns>
+               <BorderPane.margin>
+                  <Insets bottom="10.0" left="40.0" right="40.0" />
+               </BorderPane.margin>
+            </TableView>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="899.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="meditest.forms.Users_FXMLController">
+   <children>
+      <VBox prefHeight="589.0" prefWidth="937.0">
+         <children>
+            <GridPane alignment="CENTER" hgap="20.0" prefHeight="100.0" prefWidth="962.0" vgap="20.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="ID Χρήστη:" />
+                  <Label text="Username Χρήστη:" GridPane.rowIndex="2" />
+                  <Label text="Κωδικός Χρήστη:" GridPane.columnIndex="1" />
+                  <Label text="Όνομα Χρήστη:" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label text="Επίθετο Χρήστη:" GridPane.columnIndex="2" />
+                  <Label text="Ρόλος Χρήστη:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Label text="Διεύθυνση Χρήστη:" GridPane.columnIndex="3" />
+                  <Label text="Πόλη Κατοικίας:" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <Label text="Τηλέφωνο Χρήστη:" GridPane.columnIndex="4" />
+                  <Label text="ΑΦΜ Χρήστη:" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                  <Label text="ΑΜΚΑ Χρήστη:" GridPane.columnIndex="5" />
+                  <Label text="Email Χρήστη" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                  <Button fx:id="insertBtn" alignment="CENTER" disable="true" mnemonicParsing="false" onAction="#insertBtnClicked" prefHeight="36.0" prefWidth="78.0" text="Εισαγωγή" GridPane.columnIndex="6" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="updateBtn" disable="true" mnemonicParsing="false" onAction="#updateBtnClicked" text="Ενημέρωση" GridPane.columnIndex="6" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="deleteBtn" disable="true" mnemonicParsing="false" onAction="#deleteBtnClicked" prefHeight="25.0" prefWidth="79.0" text="Διαγραφή" GridPane.columnIndex="6" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <TextField fx:id="idtxt" onKeyReleased="#updateAndInsertStatus" GridPane.rowIndex="1" />
+                  <TextField fx:id="usernametxt" onKeyReleased="#updateAndInsertStatus" GridPane.rowIndex="3" />
+                  <TextField fx:id="passwordtxt" onKeyReleased="#updateAndInsertStatus" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="firstnametxt" onKeyReleased="#updateAndInsertStatus" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField fx:id="lastnametxt" onKeyReleased="#updateAndInsertStatus" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <TextField fx:id="addresstxt" onKeyReleased="#updateAndInsertStatus" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <TextField fx:id="towntxt" onKeyReleased="#updateAndInsertStatus" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                  <TextField fx:id="phonetxt" onKeyReleased="#updateAndInsertStatus" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                  <TextField fx:id="afmtxt" onKeyReleased="#updateAndInsertStatus" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                  <TextField fx:id="amkatxt" onKeyReleased="#updateAndInsertStatus" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                  <TextField fx:id="emailtxt" onKeyReleased="#updateAndInsertStatus" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                  <ChoiceBox fx:id="roles" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+               </children>
+               <padding>
+                  <Insets bottom="20.0" />
+               </padding>
+            </GridPane>
+            <TextField fx:id="search_user" promptText="Πληκτρολογίστε εδώ αν θέλετε να αναζητήσεται ένα αντικείμενο">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </TextField>
+            <Button fx:id="refresh" mnemonicParsing="false" onAction="#refresh_button_handler" text="Ανανέωση">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Button>
+            <TableView fx:id="dbUserTable" prefHeight="349.0" prefWidth="989.0">
+               <columns>
+                  <TableColumn fx:id="dbUserTableId" prefWidth="63.0" text="ID" />
+                  <TableColumn fx:id="dbUserTableUsername" prefWidth="74.0" text="Username" />
+                  <TableColumn fx:id="dbUserTablePassword" prefWidth="97.0" text="Password" />
+                  <TableColumn fx:id="dbUserTableFirstname" prefWidth="81.0" text="Όνομα" />
+                  <TableColumn fx:id="dbUserTableLastname" minWidth="1.0" prefWidth="88.0" text="Επίθετο" />
+                  <TableColumn fx:id="dbUserTableRole" prefWidth="63.0" text="Ρόλος" />
+                  <TableColumn fx:id="dbUserTableAddress" prefWidth="102.0" text="Διεύθυνση" />
+                  <TableColumn fx:id="dbUserTableTown" prefWidth="84.0" text="Πόλη" />
+                  <TableColumn fx:id="dbUserTablePhone" prefWidth="82.0" text="Τηλέφωνο" />
+                  <TableColumn fx:id="dbUserTableAfm" prefWidth="91.0" text="ΑΦΜ" />
+                  <TableColumn fx:id="dbUserTableAmka" prefWidth="84.0" text="ΑΜΚΑ" />
+                  <TableColumn fx:id="dbUserTableEmail" minWidth="0.0" prefWidth="144.0" text="Email" />
+               </columns>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </TableView>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="744.0" prefWidth="1006.0" stylesheets="@../css/menu.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="meditest.forms.Kalathi_FXMLController">
+   <children>
+      <ChoiceBox fx:id="farmakopoios" layoutX="113.0" layoutY="28.0" prefWidth="150.0" />
+      <Label layoutX="14.0" layoutY="28.0" prefHeight="25.0" prefWidth="99.0" text="Φαρμακοποιός :" />
+      <TableView fx:id="proionta_table" layoutX="76.0" layoutY="68.0" prefHeight="484.0" prefWidth="852.0">
+        <columns>
+          <TableColumn fx:id="id_farmakou" prefWidth="93.0" text="ID" />
+          <TableColumn fx:id="onoma_farmakou" prefWidth="159.0" text="Όνομα" />
+            <TableColumn fx:id="ousia_farmakou" prefWidth="158.0" text="Ουσία" />
+            <TableColumn fx:id="temaxia_farmakon" prefWidth="152.0" text="Τεμάχια" />
+            <TableColumn fx:id="timi_farmakou" prefWidth="97.0" text="Τιμή" />
+            <TableColumn fx:id="all_price" prefWidth="97.0" text="Συνολική τιμή" />
+        </columns>
+      </TableView>
+      <Button fx:id="paragkelia" layoutX="770.0" layoutY="644.0" mnemonicParsing="false" onAction="#print_timologio" prefHeight="67.0" prefWidth="158.0" text="Παραγγελία" />
+      <TextField fx:id="ekptosi" layoutX="273.0" layoutY="631.0" prefHeight="25.0" prefWidth="58.0" text="0" />
+      <TextField fx:id="sun_poso_" editable="false" layoutX="581.0" layoutY="593.0" prefHeight="25.0" prefWidth="58.0" />
+      <TextField fx:id="me_fpa" editable="false" layoutX="273.0" layoutY="593.0" prefHeight="25.0" prefWidth="58.0" />
+      <TextField fx:id="sun_timi_me_ekptosi" editable="false" layoutX="581.0" layoutY="631.0" prefHeight="25.0" prefWidth="58.0" />
+      <Label layoutX="491.0" layoutY="593.0" prefHeight="25.0" prefWidth="90.0" text="Συνολικό ποσό:" />
+      <Label layoutX="423.0" layoutY="631.0" prefHeight="25.0" prefWidth="158.0" text="Συνολικό ποσό με έκπτωση:" />
+      <Label layoutX="188.0" layoutY="631.0" prefHeight="25.0" prefWidth="58.0" text="Έκπτωση:" />
+      <Label layoutX="188.0" layoutY="593.0" prefHeight="25.0" prefWidth="84.0" text="Ποσό με φπα:" />
+      <Label layoutX="331.0" layoutY="635.0" text="\%" />
+      <Button fx:id="delete_row_button" layoutX="770.0" layoutY="552.0" mnemonicParsing="false" onAction="#del_row" prefHeight="67.0" prefWidth="158.0" text="Αφαίρεση Απο το Καλάθι" />
+      <ChoiceBox fx:id="dianomeas_sel" layoutX="824.0" layoutY="28.0" prefWidth="150.0" />
+      <Label layoutX="734.0" layoutY="28.0" prefHeight="25.0" prefWidth="73.0" text="Διανομεας :" />
+      <TextField fx:id="metaforika" layoutX="95.0" layoutY="593.0" prefHeight="25.0" prefWidth="58.0" />
+      <Label layoutX="22.0" layoutY="593.0" prefHeight="25.0" prefWidth="73.0" text="Μεταφορικά:" />
+   </children>
+</AnchorPane>
